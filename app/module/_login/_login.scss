@@ -56,3 +56,10 @@
 		margin-bottom: 25px;
 	}
 }
+
+// MEDIA 375px ===================
+@media (max-width: 375px) {
+	.modal__link {
+		margin: 0 20px;
+	}
+}

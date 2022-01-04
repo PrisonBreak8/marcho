@@ -9,3 +9,37 @@
 		align-items: center;
 	}
 }
+
+// MEDIA 620px ===================
+@media (max-width: 620px) {
+	.partners {
+		padding: 60px 0;
+		&__list {
+			flex-wrap: wrap;
+			justify-content: center;
+			height: auto;
+		}
+
+		&__item {
+			margin: 10px 35px;
+		}
+	}
+}
+
+// MEDIA 500px ===================
+@media (max-width: 500px) {
+	.partners {
+		&__item {
+			margin: 10px 21px;
+		}
+	}
+}
+
+// MEDIA 450px ===================
+@media (max-width: 450px) {
+	.partners {
+		&__item {
+			margin: 10px 25px;
+		}
+	}
+}

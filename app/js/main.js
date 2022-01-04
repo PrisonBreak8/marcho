@@ -1,5 +1,20 @@
 $(function () {
 
+	// BURGER BUTTON  ===============================================
+	$('.menu__btn').on('click', function () {
+		$('.menu__list').toggleClass('menu__list--active');
+	});
+
+	// FILTER BUTTON  ===============================================
+	$('.shop__filter-btn').on('click', function () {
+		$('.shop__filters').slideToggle()
+	});
+
+
+	//$('.footer-top__title').on('click', function () {
+	//	$(this).next().slideToggle();
+	//	$(this).toggleClass('active');
+	//});
 
 	// SECTION BLOG STANDARD SLIDER ===============================================
 	$('.blog-page__slider').slick({
@@ -35,7 +50,15 @@ $(function () {
 		asNavFor: '.product-slide__thumb',
 		draggable: false,
 		arrows: false,
-		fade: true
+		fade: true,
+		responsive: [
+			{
+				breakpoint: 1051,
+				settings: {
+					draggable: true,
+				}
+			},
+		]
 	});
 
 
@@ -48,10 +71,12 @@ $(function () {
 
 	$('.button-list').on('click', function () {
 		$('.product-item').addClass('product-item--list');
+		$('.shop-content__inner').addClass('shop-content__nogrid');
 	});
 
 	$('.button-grid').on('click', function () {
 		$('.product-item').removeClass('product-item--list');
+		$('.shop-content__inner').removeClass('shop-content__nogrid');
 	});
 
 	//https://www.npmjs.com/package/jquery-form-styler   jquery-form-styler===============================================
